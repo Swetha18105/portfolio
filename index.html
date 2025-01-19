@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="icon" type="image/png" href="./assets/img/logo.png">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
     </style>
 </head>
@@ -27,19 +28,23 @@
         </nav>
     </header>
 
-    <section id="about" class="about">
-        <h1>Hey There!</h1><br>
-        <h2>I'm Swetha Sundhar,</h2>
-        
-        <p>I am currently pursuing a Bachelor of Technology (B.Tech) at SRM University, Ramapuram, where I am building a strong foundation in <br>Computer Science Engineering. Passionate about web development and UI/UX design, I strive to translate theoretical knowledge into<br> real-world solutions.My expertise lies in HTML, CSS, JavaScript, and modern frameworks, ensuring optimal performance. I strive to <br>deliver intuitive and aesthetically pleasing solutions, enhancing user interaction across all devices.</p>
-
-        <img src="./assets/img/photo.png" alt="My Image" class="about-image">
-        <section>
-            <img src="./assets/img/facebook.png" alt="Facebook Icon" class="social-icon">
-        </section>
+    <section id="about" class="about" data-aos="fade-up">
+        <table class="about-table">
+            <tr>
+                <td class="content">
+                    <h1>Hey There!</h1><br>
+                    <h2>I'm Swetha Sundhar,</h2>
+                    <p>I am currently pursuing a Bachelor of Technology (B.Tech) at SRM University, Ramapuram, where I am building a strong foundation in <br>Computer Science Engineering. Passionate about web development and UI/UX design, I strive to translate theoretical knowledge into<br> real-world solutions.My expertise lies in HTML, CSS, JavaScript, and modern frameworks, ensuring optimal performance. I strive to <br>deliver intuitive and aesthetically pleasing solutions, enhancing user interaction across all devices.</p>
+                </td>
+                <td class="images">
+                    <img src="./assets/img/photo.png" alt="My Image" class="about-image">
+                    <img src="./assets/img/facebook.png" alt="Facebook Icon" class="social-icon">
+                </td>
+            </tr>
+        </table>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" data-aos="fade-up">
         <h2>Skills</h2>
         <table class="skills-table">
             <tr>
@@ -71,7 +76,7 @@
         </table>
     </section>
 
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" data-aos="fade-up">
         <h2>Projects</h2>
         <div class="Project1">
             <h3>Calculator</h3>
@@ -95,7 +100,7 @@
         </div>
         
     </section>
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-aos="fade-up">
         <h2>Reach Out</h2>
         <img src="./assets/img/contact.jpg">
         <p> I am always open to discussing potential opportunities, collaborations, or any inquiries you may have. Whether you are looking for expertise in Python development, backend solutions with Java, or UI/UX design, I would be happy to connect and explore how I can contribute to your project. Please feel free to reach out via email or through the phone number, and I will respond as promptly as possible.</p>
@@ -111,6 +116,31 @@
     <footer>
         <p>&copy; 2025 Swetha Sundhar. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: false,
+                mirror: false
+            });
+
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 
