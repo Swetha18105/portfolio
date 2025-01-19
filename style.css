@@ -1,0 +1,190 @@
+body {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+
+
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: url('./assets/img/bg.png') no-repeat center center fixed;
+
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;  /* Ensure header is aligned at the top */
+    
+}
+
+h1 {
+    width: 1000px;
+}
+
+h2 {
+    width: 500px;
+}
+
+.about p {
+    margin-top: -70px; /* Adjust the position of the text */
+}
+
+.logo-container {
+    flex: -1;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+}
+
+.title-container {
+    flex: -1;
+    text-align: center;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    margin-right: -2rem;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 1rem;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0; /* Remove margin to keep it at the top */
+}
+
+.about-image {
+    width: 400px; /* Adjust the size of the image */
+    height: auto;
+    margin-left: 20px; /* Space between the image and text */
+    margin-top: -220px; /* Move the image up */
+}
+
+.social-icon {
+    width: 200px; /* Reduced the size of the Facebook image */
+    height: auto;
+    margin-top: -100px;
+    margin-left: -50px;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-content {
+    width: 70%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-icons-container {
+    width: 30%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.skills-icons {
+    margin-bottom: 10px;
+}
+
+.skills-icons img {
+    object-fit: contain;
+    width: 350px;
+    height: 250px;
+}
+
+/* Ensure proper image sizing */
+.about-image, .social-icon {
+max-width: 100%; /* Ensure images do not overflow */
+height: auto;
+}
+
+.projects {
+padding: 2rem;
+margin: 1rem;
+margin-top: -50px; /* Adjust this value to move the section upwards */
+}
+
+.Project1-content img {
+width: 150px; /* Adjust size as needed */
+height: auto;
+margin-left: auto; /* Pushes image to the right end */
+margin-right: 0; /* Optional, to ensure no extra margin on the right */
+}
+
+.Project2-content {
+display: flex; /* Use flexbox for layout */
+justify-content: flex-start; /* Align items to the start */
+align-items: flex-start; /* Align items vertically at the top */
+gap: 50px; /* Completely remove the gap between images */
+}
+
+.Project2-content img {
+width: 150px; /* Adjust the size of the images */
+height: auto; /* Maintain aspect ratio */
+margin-right: 5px; /* Add a small space between images, if needed */
+}
+
+.Project2-content p {
+margin: 0; /* Remove default margin */
+margin-left: 200px;
+margin-top: -200px;
+text-align: justify; /* Align the text properly */
+}
+.btn {
+display: inline-block;
+padding: 8px 16px; /* Reduced padding */
+font-size: 0.9rem; /* Smaller font size */
+color: white;
+background: linear-gradient(135deg, #BDC3C7 0%, #2C3E50 100%);
+text-decoration: none;
+border-radius: 0px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 1px;
+transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+background: linear-gradient(135deg, #2C3E50 0%, #BDC3C7 100%);
+transform: translateY(-5px);
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+}
