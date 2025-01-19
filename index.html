@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/png" href="C:\Users\sweth\OneDrive\Desktop\New folder\img\logo.png">
+    <style>
+        body {
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+
+
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: url('img/bg.png') no-repeat center center fixed;
+
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            position: relative;  /* Ensure header is aligned at the top */
+            
+        }
+
+        h1 {
+            width: 1000px;
+        }
+
+        h2 {
+            width: 500px;
+        }
+
+        .about p {
+            margin-top: -70px; /* Adjust the position of the text */
+        }
+
+        .logo-container {
+            flex: -1;
+        }
+
+        .logo-img {
+            width: 150px;
+            height: auto;
+        }
+
+        .title-container {
+            flex: -1;
+            text-align: center;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+            margin-right: -2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 1rem;
+            color: #4a4a4a;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 0; /* Remove margin to keep it at the top */
+        }
+
+        .about-image {
+            width: 400px; /* Adjust the size of the image */
+            height: auto;
+            margin-left: 20px; /* Space between the image and text */
+            margin-top: -220px; /* Move the image up */
+        }
+
+        .social-icon {
+            width: 200px; /* Reduced the size of the Facebook image */
+            height: auto;
+            margin-top: -100px;
+            margin-left: -50px;
+        }
+
+        /* General skills icons container adjustment */
+/* Adjust skills icons container */
+/* General skills icons container adjustment */
+/* Adjust teamwork icon */
+/* General skills icons container adjustment */
+.skills-icons {
+    display: flex;
+    justify-content: flex-start; /* Keep aligned left initially */
+    margin-left: 700px; /* Move icons further to the right */
+    margin-top: -170px; /* Fine-tune vertical spacing */
+    width: auto;
+    height: auto;
+}
+.skills li {
+    margin-bottom: 10px; /* Adjust the margin to reduce the gap between list items */
+}
+.skills li h3 {
+    margin-bottom: 0px; /* Reduce space between the heading and the content */
+}
+
+.skills li p {
+    margin-top: -50px; /* Remove any top margin if it's added */
+    margin-bottom: 0px; /* Adjust this to your preference */
+}
+
+/* Style for individual skills icons */
+.skills-icons img {
+    width: 350px; /* Reduced size for skill icons */
+    height: auto;
+    margin-right: 20px; /* Add spacing between individual icons */
+}
+
+/* Increase the size of the teamwork icon */
+.teamwork-icon {
+    width: 400px !important; /* Force the teamwork icon to be larger */
+    height: auto;
+    margin-left: 200px; /* Push it further to the right */
+    margin-top: 90px;
+}
+
+/* Ensure proper image sizing */
+.about-image, .social-icon {
+    max-width: 100%; /* Ensure images do not overflow */
+    height: auto;
+}
+.skills li:last-child {
+    margin-top: -70px; /* Move the Adaptability text up */
+}
+.projects {
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: -50px; /* Adjust this value to move the section upwards */
+}
+
+.Project1-content img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-left: auto; /* Pushes image to the right end */
+    margin-right: 0; /* Optional, to ensure no extra margin on the right */
+}
+
+.Project2-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items vertically at the top */
+    gap: 50px; /* Completely remove the gap between images */
+}
+
+.Project2-content img {
+    width: 150px; /* Adjust the size of the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Add a small space between images, if needed */
+}
+
+.Project2-content p {
+    margin: 0; /* Remove default margin */
+    margin-left: 200px;
+    margin-top: -200px;
+    text-align: justify; /* Align the text properly */
+}
+.btn {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller font size */
+    color: white;
+    background: linear-gradient(135deg, #BDC3C7 0%, #2C3E50 100%);
+    text-decoration: none;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #2C3E50 0%, #BDC3C7 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <div class="logo-container">
+            <img src="C:\Users\sweth\OneDrive\Desktop\New folder\img\logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="title-container">
+            <!-- Add any title content here if needed -->
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h1>Hey There!</h1><br>
+        <h2>I'm Swetha Sundhar,</h2>
+        
+        <p>I am currently pursuing a Bachelor of Technology (B.Tech) at SRM University, Ramapuram, where I am building a strong foundation in <br>Computer Science Engineering. Passionate about web development and UI/UX design, I strive to translate theoretical knowledge into<br> real-world solutions.My expertise lies in HTML, CSS, JavaScript, and modern frameworks, ensuring optimal performance. I strive to <br>deliver intuitive and aesthetically pleasing solutions, enhancing user interaction across all devices.</p>
+
+        <img src="C:\Users\sweth\OneDrive\Desktop\New folder\img\photo.png" alt="My Image" class="about-image">
+        <section>
+            <img src="C:\Users\sweth\OneDrive\Desktop\New folder\img\facebook.png" alt="Facebook Icon" class="social-icon">
+        </section>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><h3>Technical Proficiencies:</h3> <br>Expertise in Python, C, C++, HTML, CSS, and JavaScript, with a strong foundation in <br>software development and web technologies.</li>
+
+            <div class="skills-icons">
+                <img src="C:\Users\sweth\OneDrive\Desktop\New folder\img\sk1.png">
+               
+            </div>
+
+            <li><h3>Core Competencies:</h3><br> Exceptional communication skills, collaborative teamwork, and a strategic approach <br> to problem-solving, ensuring innovative and effective solutions.
+            </li>
+            <div class="skills-icons">
+                <img src="C:\Users\sweth\OneDrive\Desktop\New folder\img\sk2.png" alt="Teamwork Icon" class="teamwork-icon">
+            </div>
+            <li><h3>Adaptability:</h3><br> Quick to learn and adapt to new tools, technologies, and environments, ensuring seamless<br> integration and consistent performance in dynamic settings.
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="Project1">
+            <h3>Calculator</h3>
+            <div class="Project1-content">
+
+                
+                    <p>Developed a simple calculator web application with basic arithmetic operations (addition, subtraction, multiplication, division) using HTML, CSS, and JavaScript.</p>
+                    <img src="img/Calci.png" alt="Project 1 " class="image-small">
+                </div>
+            </div>
+        </div>
+        <div class="Project2">
+            <h3>UI/UX Design</h3>
+            <div class="Project2-content">
+                <img src="img/app.png" alt="Project 2 Image 1" class="image-small">
+                <div class="text-and-image">
+                    <img src="img/app2.png" alt="Project 2 Image 2" class="image-small">
+                    <p>I have created a user-centric food application design using Figma, focusing on intuitive navigation and an engaging user interface.</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="contact" class="contact">
+        <h2>Reach Out</h2>
+        <img src="C:\Users\sweth\OneDrive\Desktop\New folder\img\contact.jpg">
+        <p> I am always open to discussing potential opportunities, collaborations, or any inquiries you may have. Whether you are looking for expertise in Python development, backend solutions with Java, or UI/UX design, I would be happy to connect and explore how I can contribute to your project. Please feel free to reach out via email or through the phone number, and I will respond as promptly as possible.</p>
+        <p>Email: <a href="mailto:swethasundhar1810@gmail.com">swethasundhar1810@gmail.com</a></p>
+        <p>Phone: +91-7010256728</p>
+        <p>Linked in:<a href="https://www.linkedin.com/in/swetha-sundhar-1051a32b1/">swethasundhar</a></p></p>
+    
+        <a href="C:\Users\sweth\OneDrive\Desktop\New folder\Resume.pdf" download class="btn">Download Resume</a>
+        
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Swetha Sundhar. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
